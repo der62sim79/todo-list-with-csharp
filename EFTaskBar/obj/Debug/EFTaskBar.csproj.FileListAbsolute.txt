@@ -1,0 +1,16 @@
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.csprojAssemblyReference.cache
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.Form1.resources
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.Properties.Resources.resources
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.csproj.GenerateResource.cache
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.csproj.CoreCompileInputs.cache
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EFTaskBar.exe.config
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EFTaskBar.exe
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EFTaskBar.pdb
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EntityFramework.dll
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EntityFramework.xml
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.csproj.CopyComplete
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.exe
+C:\Users\DCV\source\repos\EFTaskBar\EFTaskBar\obj\Debug\EFTaskBar.pdb
