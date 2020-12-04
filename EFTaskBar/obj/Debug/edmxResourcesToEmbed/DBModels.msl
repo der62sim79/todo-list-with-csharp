@@ -4,6 +4,7 @@
     <EntitySetMapping Name="TaskToDoes">
       <EntityTypeMapping TypeName="TodoDataModel.TaskToDo">
         <MappingFragment StoreEntitySet="TaskToDo">
+          <ScalarProperty Name="TimeStemp" ColumnName="TimeStemp" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Task" ColumnName="Task" />
           <ScalarProperty Name="Done" ColumnName="Done" />

@@ -7,24 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace EFTaskBar
 {
     public partial class Form1 : Form
     {
+        
         TaskToDo model = new TaskToDo();
+        
         public Form1()
         {
             InitializeComponent();
 
-            var timer = new Timer();
-            timer.Interval = 1000;
-            timer.Tick += Timer_Tick_ValueChanged;
-            timer.Start();
+            string deateTimeFormat = "dd.MM.yyyy HH:mm:ss";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = deateTimeFormat;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             Clear();
         }
 
@@ -45,9 +50,15 @@ namespace EFTaskBar
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+            dateTimePicker1.Value = DateTime.Now;
+
             model.Task = todoList.Text.Trim();
-            using(TodoDataEntities db = new TodoDataEntities())
+            model.TimeStemp = dateTimePicker1.Value;
+           
+            using (TodoDataEntities db = new TodoDataEntities())
             {
+                
                 db.TaskToDoes.Add(model);
                 db.SaveChanges();
             }
@@ -63,7 +74,7 @@ namespace EFTaskBar
                 var display = string.Empty;
                 foreach(var p in db.TaskToDoes.Where(c => c.Done == false))
                 {
-                    display += $"\n{p.Task}";
+                    display += $"\n{p.Task} + {p.Done}";
                 }
                 MessageBox.Show(display);
             }
@@ -74,9 +85,22 @@ namespace EFTaskBar
             ShowTodoList();
         }
 
-        private void Timer_Tick_ValueChanged(object sender, EventArgs e)
+        private void btnShowDbRtb_Click(object sender, EventArgs e)
         {
-            
+            ShowDbInsRbt();   
+        }
+
+        void ShowDbInsRbt()
+        {
+             using(TodoDataEntities db = new TodoDataEntities())
+            {
+                var display = string.Empty;
+                foreach(var p in db.TaskToDoes.Where(c => c.Done == false))
+                {
+                    display += $"\n{p.Task} + {p.Done} + {p.TimeStemp}";
+                }
+                todoList.Text = display.ToString();
+            }
         }
     }
 }

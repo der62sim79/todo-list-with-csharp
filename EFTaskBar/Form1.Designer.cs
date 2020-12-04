@@ -29,11 +29,14 @@ namespace EFTaskBar
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.todoList = new System.Windows.Forms.RichTextBox();
-            this.Timer_Tick = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnShowDbRtb = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnAdd
@@ -48,20 +51,12 @@ namespace EFTaskBar
             // 
             // todoList
             // 
-            this.todoList.Location = new System.Drawing.Point(233, 95);
+            this.todoList.Location = new System.Drawing.Point(80, 95);
             this.todoList.Name = "todoList";
-            this.todoList.Size = new System.Drawing.Size(250, 294);
+            this.todoList.Size = new System.Drawing.Size(442, 294);
             this.todoList.TabIndex = 3;
             this.todoList.Text = "";
             this.todoList.TextChanged += new System.EventHandler(this.todoList_TextChanged);
-            // 
-            // Timer_Tick
-            // 
-            this.Timer_Tick.Location = new System.Drawing.Point(233, 54);
-            this.Timer_Tick.Name = "Timer_Tick";
-            this.Timer_Tick.Size = new System.Drawing.Size(250, 22);
-            this.Timer_Tick.TabIndex = 4;
-            this.Timer_Tick.ValueChanged += new System.EventHandler(this.Timer_Tick_ValueChanged);
             // 
             // button1
             // 
@@ -83,14 +78,32 @@ namespace EFTaskBar
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(233, 40);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(250, 22);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // btnShowDbRtb
+            // 
+            this.btnShowDbRtb.Location = new System.Drawing.Point(544, 348);
+            this.btnShowDbRtb.Name = "btnShowDbRtb";
+            this.btnShowDbRtb.Size = new System.Drawing.Size(244, 23);
+            this.btnShowDbRtb.TabIndex = 8;
+            this.btnShowDbRtb.Text = "Anzeige im RichBoxText";
+            this.btnShowDbRtb.UseVisualStyleBackColor = true;
+            this.btnShowDbRtb.Click += new System.EventHandler(this.btnShowDbRtb_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShowDbRtb);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Timer_Tick);
             this.Controls.Add(this.todoList);
             this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
@@ -103,9 +116,11 @@ namespace EFTaskBar
         #endregion
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.RichTextBox todoList;
-        private System.Windows.Forms.DateTimePicker Timer_Tick;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnShowDbRtb;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -17,5 +17,6 @@ namespace EFTaskBar
         public int Id { get; set; }
         public string Task { get; set; }
         public bool Done { get; set; }
+        public Nullable<System.DateTime> TimeStemp { get; set; }
     }
 }
